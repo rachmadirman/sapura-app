@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
-import { TbDatabase, TbDatabaseSearch, TbCloudUpload, TbSettings, TbUserCircle,TbLogout2, TbHome} from "react-icons/tb";
+import { TbDatabase, TbDatabaseSearch, TbCloudUpload, TbSettings, TbUserCircle,TbLogout2, TbHome, TbHelpCircle } from "react-icons/tb";
 
 const Sidebar = () => {
 
@@ -10,7 +10,8 @@ const Sidebar = () => {
     {title: "View All Data", icon: <TbDatabaseSearch />, path:"/Detail"},
     {title: "Upload File", icon: <TbCloudUpload />, path:"/Upload"},
     {title: "LHDN Config", icon: <TbSettings/>,path:"/Config"},
-    {title: "Profile", icon: <TbUserCircle />, path:"/Comingsoon"},
+    {title: "Profile", icon: <TbUserCircle />, path:"/Profile"},
+    {title: "Help", icon: <TbHelpCircle />, path:"/Help"},
     {title: "Logout", icon: <TbLogout2 />, path:"/Login"}
   ]
 
@@ -42,7 +43,6 @@ const Sidebar = () => {
         </div>
       </nav>
     </>
-    
   );
 }
 

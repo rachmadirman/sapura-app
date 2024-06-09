@@ -5,7 +5,6 @@ import FooterSmall from "./FooterSmall";
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
-  const userRef = useRef();
   const errRef = useRef();
   const navigate = useNavigate();
 
@@ -76,7 +75,7 @@ const Login = () => {
         navigate("/Home")
       ) : (
         <main>
-          <section className="absolute w-full h-full">
+          <section className="absolute w-screen h-screen">
             <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
             <div
               className="absolute top-0 w-full h-full bg-izeno-gradien-1"
@@ -90,13 +89,10 @@ const Login = () => {
             <div className="container mx-auto px-4 h-full">
               <div className="flex content-center items-center justify-center h-full">
                 <div className="w-full lg:w-4/12 px-4">
-
-
-
                   <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-white-300 border-0">
                     <div className="rounded-t mb-0 px-6 py-6">
                       <div className="text-center mb-1">
-                      <img className="w-44 mx-auto" src={"LHDN-01.png"} alt="lhdn logo"/>
+                        <img className="w-44 mx-auto" src={"LHDN-01.png"} alt="lhdn logo" />
                         <h6 className="text-izeno-black text-lg font-bold">
                           Tenant : iZeno
                         </h6>
@@ -175,7 +171,10 @@ const Login = () => {
                 </div>
               </div>
             </div>
-            <FooterSmall absolute />
+            <footer>
+              <FooterSmall absolute/>
+            </footer>
+
           </section>
         </main>
       )}

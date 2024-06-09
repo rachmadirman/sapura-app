@@ -174,8 +174,6 @@ function AddData() {
         </form>
       </div>
 
-
-
       <FooterSmall absolute />
       </section>
     </>
